@@ -16,3 +16,14 @@ app.listen(PORT, () => {
 app.use("/", (req, res) => {
   res.json({ message: "Welcome to my root route. GET comfy!" });
 });
+
+app.post("/guestbook", async (req, res) => {
+  const newGuest = req.body.formValues;
+  console.log(newGuest);
+
+  const query = await db.query(
+    `INSERT INTO guestbook (name, comment) VALUES ($1, $2)`,
+    [newGuest.name, newGuest.comment]
+  );
+  res.json({ status: "success", values: newGuest });
+});
