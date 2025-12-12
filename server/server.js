@@ -13,7 +13,7 @@ app.listen(PORT, () => {
   console.info(`Server running on port ${PORT}`);
 });
 
-app.use("/", (req, res) => {
+app.get("/", (req, res) => {
   res.json({ message: "Welcome to my root route. GET comfy!" });
 });
 
@@ -26,4 +26,9 @@ app.post("/guestbook", async (req, res) => {
     [newGuest.name, newGuest.comment]
   );
   res.json({ status: "success", values: newGuest });
+});
+
+app.get("/guestbook", async (req, res) => {
+  const guests = await db.query(`SELECT id, name, comment FROM guestbook`);
+  res.json(guests.rows);
 });
