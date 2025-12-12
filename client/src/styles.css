@@ -7,3 +7,36 @@
 body {
   background-color: lavender;
 }
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+#guestbook-form {
+  width: 60%;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+span {
+  color: crimson;
+}
+
+#comments-container {
+  border: solid 2px black;
+  width: 60%;
+}
