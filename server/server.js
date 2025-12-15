@@ -14,7 +14,10 @@ app.listen(PORT, () => {
 });
 
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to my root route. GET comfy!" });
+  res.json({
+    message:
+      "Welcome to my root route. To get to the guestbook API, add /guestbook to this URL!",
+  });
 });
 
 app.post("/guestbook", async (req, res) => {

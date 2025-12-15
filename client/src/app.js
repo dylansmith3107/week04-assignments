@@ -9,14 +9,14 @@ async function handleGuestbookSubmit(event) {
   const formValues = Object.fromEntries(formDataTemplate);
   console.log(formValues);
 
-  await fetch("http://localhost:8080/guestbook", {
+  await fetch("https://week04-assignments.onrender.com/guestbook", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ formValues }),
   });
-  //renderComments();
+  renderComments();
 }
 
 guestbookForm.addEventListener("submit", handleGuestbookSubmit);
@@ -25,7 +25,9 @@ guestbookForm.addEventListener("submit", handleGuestbookSubmit);
 //Rendered Comments
 
 async function getGuestbookApi() {
-  const response = await fetch("http://localhost:8080/guestbook");
+  const response = await fetch(
+    "https://week04-assignments.onrender.com/guestbook"
+  );
 
   const data = await response.json();
   console.log(data);

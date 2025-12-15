@@ -6,6 +6,8 @@
 
 body {
   background-color: lavender;
+  font-family: monospace;
+  background-color: white;
 }
 
 header {
@@ -13,6 +15,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  color: goldenrod;
 }
 
 main {
@@ -25,12 +28,18 @@ main {
 #guestbook-form {
   width: 60%;
   padding-bottom: 1.5rem;
+  border-left: solid 2px goldenrod;
+  border-right: solid 2px goldenrod;
 }
 
 fieldset {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-top: solid 2px goldenrod;
 }
 
 span {
@@ -41,6 +50,20 @@ button {
   cursor: pointer;
 }
 
+#submit-btn {
+  width: 4rem;
+  height: auto;
+  background-color: goldenrod;
+  color: white;
+  align-self: center;
+  border: solid 2px darkgoldenrod;
+}
+
+#submit-btn:hover {
+  background-color: white;
+  color: goldenrod;
+}
+
 #comments-container {
   display: flex;
   flex-direction: column;
@@ -48,6 +71,9 @@ button {
   height: 55vh;
   overflow: auto;
   gap: 1rem;
+  border-left: solid 2px goldenrod;
+  border-right: solid 2px goldenrod;
+  background-color: lightcyan;
 }
 
 .message-title {
@@ -55,6 +81,9 @@ button {
   justify-content: space-evenly;
   padding: 2px;
   border-top: solid 2px black;
+  border-left: solid 2px goldenrod;
+  border-right: solid 2px goldenrod;
+  background-color: lightcyan;
 }
 
 .comment-div {
@@ -81,7 +110,6 @@ button {
     flex-direction: column;
     align-content: center;
     flex-wrap: wrap;
-    gap: 1.5rem;
   }
 
   #guestbook-form {
@@ -91,5 +119,9 @@ button {
   #comments-container {
     width: 90%;
     height: 65vh;
+  }
+
+  .gold-pattern {
+    display: none;
   }
 }
