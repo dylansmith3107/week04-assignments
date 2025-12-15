@@ -29,3 +29,5 @@ What errors or bugs did you encounter while completing your assignment? How did 
 What went really well and what could have gone better?
 
 I feel the general visual design could have been much better, for some reason with this specific assignment, I had some sort of artists block type thing, and was struggling to come up design ideas, and some of those I did have in mind did not come to fruition.
+
+Upon deploying everything in render, an image I have set to display next to the name of all comments, seems to not load in properly, despite working perfectly when running everything via localhost, I don't know why this is the case, and it is very frustrating.
